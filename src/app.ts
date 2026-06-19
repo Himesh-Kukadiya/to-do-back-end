@@ -12,4 +12,13 @@ app.get("/", (req: Request, res: Response) => {
     .json({message: "Server is listening.", success: true, health: true});
 })
 
+app.get("/health", (req: Request, res: Response) => {
+    res
+    .status(200)
+    .json({
+        message: "Server is healthy",
+        success: true
+    })
+})
+
 export default app;
